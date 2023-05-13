@@ -28,8 +28,7 @@ export const Contact = ({ id, name, number, onClick }) => {
       </CallButton>
       <DeleteButton
         type="button"
-        onClick={onClick}
-        id={id}
+        onClick={() => onClick(id)}
         title="Delete Contact"
       >
         <ContactIcon width="24" height="24">
@@ -44,4 +43,5 @@ Contact.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };

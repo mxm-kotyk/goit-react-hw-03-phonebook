@@ -23,6 +23,7 @@ export const ContactList = ({ contacts, onClick }) => {
 };
 
 ContactList.propTypes = {
+  onClick: PropTypes.func.isRequired,
   contacts: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,

@@ -52,13 +52,9 @@ export class App extends Component {
     );
   };
 
-  deleteContact = e => {
-    const contactId = e.currentTarget.id;
-
+  deleteContact = id => {
     this.setState(prevState => ({
-      contacts: [
-        ...prevState.contacts.filter(contact => contact.id !== contactId),
-      ],
+      contacts: [...prevState.contacts.filter(contact => contact.id !== id)],
     }));
   };
 
